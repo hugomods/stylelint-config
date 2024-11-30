@@ -1,0 +1,32 @@
+{
+  "name": "@hugomods/stylelint-config",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomods/stylelint-config.git"
+  },
+  "author": "Razon Yang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomods/stylelint-config/issues"
+  },
+  "homepage": "https://github.com/hugomods/stylelint-config",
+  "dependencies": {
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-scss": "^6.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:style && npm run lint:prettier",
+    "lint:fix": "npm run lint:style:fix && npm run lint:prettier:fix",
+    "lint:prettier": "npx prettier . --check",
+    "lint:prettier:fix": "npx prettier . --write",
+    "lint:style": "stylelint \"**/*.scss\"",
+    "lint:style:fix": "stylelint \"**/*.scss\" --fix"
+  },
+  "devDependencies": {
+    "@hugomods/prettier-config": "^0.1.3"
+  },
+  "prettier": "@hugomods/prettier-config"
+}
